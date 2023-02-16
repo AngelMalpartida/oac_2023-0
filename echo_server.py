@@ -34,3 +34,4 @@ if __name__ == '__main__':
         finally:
             print("Cerrando conexión con el cliente")
             conn.close()
+            break
