@@ -15,8 +15,9 @@ if __name__ == '__main__':
     t2 = Thread(target=cuenta, args=(CUENTA // 2,))
     t1.start()
     t2.start()
-    t1.join()
-    t2.join()
+    #t1.join()
+    #t2.join()  # Si se descomentan estas dos líneas, los tiempos de ejecucion se reducen
+    
     fin = time.perf_counter()
 
     print(f"Tiempo de cuenta descendente multihilo: {fin - inicio:0.2f} segundos")
