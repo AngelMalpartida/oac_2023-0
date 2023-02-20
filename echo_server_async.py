@@ -15,7 +15,6 @@ async def handle_client(conn, client_address):
 
 async def run_server():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
     server_address = ("0.0.0.0", 5000)
     print(f"Iniciando servidor en {server_address[0]}:{server_address[1]}")
     sock.bind(server_address)

@@ -7,13 +7,13 @@ SOCK_BUFFER = 4
 
 if __name__ == '__main__':
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_address = ("10.100.136.87", 5000)
+    server_address = ("192.168.0.105", 5000)
 
     print(f"Conectando a {server_address[0]}:{server_address[1]}")
 
     sock.connect(server_address)
     client_id = random.randint(0, 1000)
-    for i in range(10):
+    for i in range(5):
         msg = f"Hola mundo {i} desde el cliente {client_id}"
         msg = msg.encode("utf-8")
         inicio_tx = time.perf_counter()
